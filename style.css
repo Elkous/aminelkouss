@@ -1,0 +1,276 @@
+:root {
+  --color: #9C1ED5;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #ddd;
+}
+.bod{
+  width: 100%;
+  height: 100%;
+  background: rgba(225, 225, 225, .1);
+  position: fixed;
+}
+.bod.active{
+  width: 100%;
+  height: 100%;
+  background: rgba(225, 225, 225, 1);
+  position: fixed;
+}
+/*----------------start navbr---------*/
+  .nav{
+    background: #aaa;
+    height: 80px;
+    border-bottom: 1px solid white;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 20px;
+  }
+/*------------------end navbar----*/
+/*--------------------start logo--------*/
+  .nav .logo{
+    width: 60px;
+    height: 60px;
+  }
+  .nav .logo img{
+    width: 100%;
+    background: #444;
+  }
+  .nav .logo span{
+    color: var(--color);
+  }
+/*--------------------end logo----------*/
+
+/*----------------start list -------*/
+
+
+.nav .li ul li{
+  list-style: none;
+  display: inline;
+}
+.nav .li ul li a{
+  text-decoration: none;
+  margin: 15px;
+  color: white;
+  background: #333;
+  padding: 8px 15px;
+  cursor: pointer;
+ 
+}
+.nav .li ul li a:hover{
+  background: red;
+}
+ @media (max-width:600px) {
+   .nav .li{
+     display: none;
+   }
+ }
+/*----------------end list----------*/
+
+/*--------------start btn-----------*/
+.btn{
+  width: 60px;
+  height: 60px;
+  background: #444;
+  position: fixed;
+  top: 10px;
+  right: 18px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.btn:active{
+  background: #1ED596;
+}
+@media(min-width:600px){
+  .btn{
+    display: none;
+  }
+}
+.btn:before{
+  content:"";
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  background: #eee;
+  border-radius: 7px;
+  transform: translateY(7px);
+  transition: .4s all;
+}
+.btn:after{
+  content:"";
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  background: #eee;
+  border-radius: 7px;
+  transform: translateY(-7px);
+  transition: .4s all;
+}
+.btn.active:before{
+  transform: rotate(45deg);
+  width: 30px;
+}
+.btn.active:after{
+  transform: rotate(-45deg);
+  width: 30px;
+}
+/*------------eand btn-----------*/
+
+ /*------------start menu-----------*/
+ .menu{
+   width: 80%;
+   height: 400px;
+   background: grey;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transition: 1s all;
+   z-index: 1000;
+   transform: translate(-50%,-50%);
+   display: none;
+   cursor: pointer;
+ }
+ .menu.active{
+   display: block;
+
+ }
+ .menu .list1{
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   display: flex;
+   align-items: center;
+ }
+ .menu .list1 ul li {
+   list-style: none;
+   margin: 25px;
+   text-align: center;
+   justify-content: center;
+   display: flex;
+   align-items: center; 
+   width: 200px;
+   height: 40px;
+   background: #444;
+ } 
+ .menu .list1 ul li a{
+   text-decoration: none;
+   color: white;
+   cursor: none;
+   /*
+   padding: 10px;
+   background: #333;
+   width: 100%;
+   */
+ }
+ .menu .list1 ul li:active{
+   background: #1ED596;
+ }
+  /*------------eand menu-----------*/
+  
+  /*----------------start main-------------*/
+ .main{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+ }
+ .main .card-img{
+   width: 400px;
+   height: 400px;
+   margin: 30px;
+   flex-wrap: wrap;
+   background: red;
+ }
+ .main .card-img img{
+   width: 100%;
+   height: 320px;
+   object-fit: cover;
+ }
+ .main .title{
+   width: 100%;
+   height: 80px;
+   color: white;
+   background: #444;
+   font-size: 24px;
+   padding-left: 10px;
+   line-height: 65px;
+   font-family: sans-serif;
+ }
+ .main .title span{
+   float: right;
+   padding-right: 15px;
+ }
+  /*----------------end main-------------*/
+
+/*---------------------star social-------*/
+.social{
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.social div{
+  width: 60px;
+  background: #444;
+  height: 60px;
+  margin: 20px; 
+  border-radius: 20px;
+}
+.social div a{
+  color: white;
+}
+.social div a svg{
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+}
+/*---------------------end social-------*/
+h3{
+width: 320px;
+display: flex;
+text-align: center;
+margin: 55px auto;
+
+}
+/*------+-+--------btn-watssap-----+-*/
+.btn-wt{
+position: fixed;
+width: 65px;
+height: 65px;
+border-radius: 50%;
+bottom: 20px;
+right: 20px;
+background: #47AF5F;
+align-items: center;
+justify-content: center;
+display: flex;
+}
+.btn-wt.active{
+display: none;
+}
+.btn-wt a{
+color: white;
+align-items: center;
+justify-content: center;
+display: flex;
+}
+
+.btn-wt svg{
+width: 30px;
+height: 30px
+}
+.btn-wt svg:active{
+background: red;
+}
+/*--------------+----end wahtssap----------*/

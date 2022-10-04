@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+  <title>medshop</title>
+  
+<style>
+
+</style>
+</head>
+
+<body>
+  
+  <!---------------start navbar------------>
+  <div class="bod"></div>
+  
+  <div class="nav">
+    <!--
+    <div class="logo">med<span>shop</span></div>
+    -->
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+    </div>
+    <div class="li">
+      <ul>
+        <li><a href="shopmed.html">الـصـفـحـة الـر ئـسـيـة</a></li>
+        <li><a href="gallery.html">مـعـر ض الصـو ر</a></li>
+        <li><a href="socialm.html">لـتـو ا صـل مـعـنـا</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="btn"></div>
+  <!---------------end navbar--------------->
+  
+  <!-------------------start menu-------->
+  <div class="menu">
+    
+    <div class="list1">
+      <ul>
+        <li>
+          <a href="index.html">الـصـفـحـة الـر ئـسـيـة</a>
+        </li>
+        <li>
+          <a href="gallery.html">مـعـر ض الصـو ر</a></li>
+        <li><a href="socialm.html">لـتـو ا صـل مـعـنـا</a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+  <!----------------end menu------------->
+  
+  
+  <!---------------------------->
+
+  
+  <!-----------------start script----------->
+  <script>
+    let btn = document.querySelector('.btn');
+    let menu=document.querySelector('.menu');
+    let a = document.querySelector('.a');
+    let bod = document.querySelector('.bod');
+    btn.onclick = function(){
+      btn.classList.toggle('active');
+      menu.classList.toggle('active');
+      bod.classList.toggle('active');
+    }
+    a.onclick =function(){
+    //  menu.style.display='none';
+    }
+  </script>
+  <!------------------end script---------->
+  
+</body>
+</html>
